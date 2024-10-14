@@ -1,0 +1,146 @@
+:root {
+    --apricot: #FBC4AB;
+    --soft-orange: #FFDAB9;
+    --melon: #F8AD9D;
+    --coral: #F08080;
+    --inst: #ffd7c9;
+    --inred: #b34a12;
+    /* 
+    #B49082;
+    #D6C3C9;
+    #98473E;
+    #FCBCB8;
+    #EFA7A7;
+    #FFD972;
+
+    #F4DBD8;
+    #BEA8A7;
+    #C09891;
+    #775144;
+    #2A0800; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jua", sans-serif;
+}
+
+body {
+    background-color: var(--inst);
+    color: #333;
+}
+
+header {
+    background-color: var(--inst);
+    color: var(--inred);
+    padding: 5px;
+    text-align: center;
+}
+
+header img {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.bx-base h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#ch-base {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#ch-base img {
+    width: 175px;
+    margin: 0 5px 5px;
+    border: 1px solid gray;
+}
+
+.ch-base {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 0 25px;
+}
+
+#bx-custom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ch-custom{
+    width: 400px;
+    margin: 0;
+}
+
+.vitrine{
+    display: none;
+}
+
+.vitrine:active{
+    display: block;
+}
+
+
+.vitrine img{
+    width: 75px;
+    border: 1px solid var(--inred);
+    border-radius: 25px;
+}
+
+.vitrine img:hover{
+    background-color: white;
+}
+
+.preview {
+    display: none;
+    position: relative;
+    width: 350px;
+    height: 460px;
+    border: 1px dashed #670c0c;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+footer {
+    background-color: var(--inred);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .vitrine {
+        flex-direction: column;
+    }
+
+    .produto {
+        width: 90%;
+    }
+
+    aside {
+        width: 100%;
+        float: none;
+    }
+}
