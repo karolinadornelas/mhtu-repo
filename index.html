@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>mhtu - custom!!</title>
 </head>
+
 <body>
     <header>
-        <img src="/logo/mhtu-zip-logo.png" alt="mhtu logo" style="width: 185px;">
+        <a href="info.html"><img src="/logo/mhtu-zip-logo.png" alt="mhtu logo" style="width: 185px;"></a>
         <h4>⤙ customize seu pedido! ୭˚.🎀</h4>
     </header>
+    <nav class="navbar">
+        <div class="bx-nav">
+            <a href="info.html">inicio</a>
+            <a href="index.html">custom</a>
+
+            <div class="dropdown">
+                <button class="dropdown-btn">produtos</button>
+                <div class="dropdown-content">
+                    <a href="#">biscuit</a>
+                    <a href="#">croche</a>
+                </div>
+            </div>
+
+            <a href="#">sobre</a>
+            <a href="">q&a</a>
+
+        </div>
+    </nav>
 
     <div id="canvas">
         <div class="bx-base">
@@ -25,19 +49,19 @@
                     <h5>miffy</h5>
                 </div>
                 <div class="ch-base">
-                    <img class="base-option" data-base="bunny" src="/custom/base-bunny.png" alt="bunny">
+                    <img class="base-option" data-base="bunny" src="/bunny-catinho custom/base-bunny.png" alt="bunny">
                     <h5>bunny</h5>
                 </div>
                 <div class="ch-base">
-                    <img class="base-option" data-base="catinho" src="/custom/base-cat.png" alt="catinho">
+                    <img class="base-option" data-base="catinho" src="/bunny-catinho custom/base-cat.png" alt="catinho">
                     <h5>catinho</h5>
                 </div>
             </div>
-            
+
         </div>
         <div id="bx-custom">
             <div class="ch-custom">
-            <!-- miffy -->
+                <!-- miffy -->
                 <div class="vitrine" id="vitrine-miffy">
                     <h3>personalize miffy!</h3>
                     <img class="blush" src="miffy custom/blush-m.png" />
@@ -74,49 +98,83 @@
                     <img class="bag" src="miffy custom/bag-m-brown.png" />
                     <img class="bag" src="miffy custom/bag-m-pink.png" />
                     <img class="bag" src="miffy custom/bag-m-red.png" />
+                    <img class="bag" src="miffy custom/hdst-bag-black.png" />
+
                 </div>
-        
+
                 <!-- bunny-->
                 <div class="vitrine" id="vitrine-bunny">
                     <h3>personalize bunny!</h3>
                     <div class="wardrobe">
-                        <img class="skin" src="/custom/base-b-balck.png" />
-                        <img class="skin" src="custom/base-b-medium.png" />
-                        <img class="skin" src="custom/base-b-white.png" />
-                        <img class="hoodie" src="custom/hoodie-b-strawberry.png" />
-                        <img class="hoodie" src="custom/hoodie-b-blue.png" />
-                        <img class="hoodie" src="custom/hoodie-b-pink.png" />
-                        <img class="hoodie" src="custom/hoodie-red-bunny.png" />
-                        <img class="trinket" src="custom/green-collar.png" />
-                        <img class="trinket" src="custom/green-crown.png" />
-                        <img class="trinket" src="custom/green-leafs.png" />
-                        <img class="trinket" src="custom/green-sprout.png" />
+                        <img class="blush" src="/bunny-catinho custom/blush-b.png" />
+                        <img class="face" src="/bunny-catinho custom/face-b-black.png" />
+                        <img class="skin" src="/bunny-catinho custom/base-b-beige.png" />
+                        <img class="skin" src="/bunny-catinho custom/base-b-black.png" />
+                        <img class="trinket" src="/bunny-catinho custom/collar-b-gray.png" />
+                        <img class="trinket" src="/bunny-catinho custom/green-collar.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-black.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-blue.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-pink.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-soft-pink.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-red.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-green.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-eucalipt.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-lime.png" />
+                        <img class="deco" src="/bunny-catinho custom/leaf-1.png" />
+                        <img class="deco" src="/bunny-catinho custom/leaf-2.png" />
+                        <img class="deco" src="/bunny-catinho custom/leaf-3.png" />
+                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-pink.png" />
+                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-soft-pink.png" />
+                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-strawberry.png" />
+                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-red.png" />
+                        <img class="headset" src="" />
+                        <img class="trinket" src="/bunny-catinho custom/bow-b-red.png" />
+                        <img class="acessory" src="" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-black.png" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-red.png" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-pink.png" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-white.png" />
                     </div>
                 </div>
-                
+
                 <!-- catinho -->
                 <div class="vitrine" id="vitrine-catinho">
                     <h3>personalize catinho!</h3>
                     <div class="wardrobe">
-                        <img class="trinket" src="custom/green-collar.png" />
-                        <img class="trinket" src="custom/green-crown.png" />
-                        <img class="trinket" src="custom/green-leafs.png" />
-                        <img class="trinket" src="custom/green-sprout.png" />
-                        <img class="skin" src="/custom/base-b-balck.png" />
-                        <img class="skin" src="custom/base-b-medium.png" />
-                        <img class="skin" src="custom/base-b-white.png" />
-                        <img class="hoodie" src="custom/hoodie-c-strawberry.png" />
-                        <img class="hoodie" src="custom/hoodie-c-blue.png" />
-                        <img class="hoodie" src="custom/hoodie-c-pink.png" />
-                        <img class="hoodie" src="custom/hoodie-red-cat.png" />
+                        <img class="blush" src="/bunny-catinho custom/blush-b.png" />
+                        <img class="face" src="/bunny-catinho custom/face-b-black.png" />
+                        <img class="skin" src="/bunny-catinho custom/base-b-beige.png" />
+                        <img class="skin" src="/bunny-catinho custom/base-b-black.png" />
+                        <img class="trinket" src="/bunny-catinho custom/collar-b-gray.png" />
+                        <img class="trinket" src="/bunny-catinho custom/green-collar.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-black.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-blue.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-pink.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-soft-pink.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-red.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-green.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-eucalipt.png" />
+                        <img class="headset" src="/bunny-catinho custom/dress-b-lime.png" />
+                        <img class="deco" src="/bunny-catinho custom/leaf-1.png" />
+                        <img class="deco" src="/bunny-catinho custom/leaf-2.png" />
+                        <img class="deco" src="/bunny-catinho custom/leaf-3.png" />
+                        <img class="hoodie" src="/bunny-catinho custom/hoodie-c-pink.png" />
+                        <img class="hoodie" src="/bunny-catinho custom/hoodie-c-strawberry.png" />
+                        <img class="hoodie" src="/bunny-catinho custom/hoodie-c-red.png" />
+                        <img class="headset" src="" />
+                        <img class="trinket" src="/bunny-catinho custom/bow-b-red.png" />
+                        <img class="acessory" src="" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-black.png" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-red.png" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-pink.png" />
+                        <img class="bag" src="/bunny-catinho custom/bag-b-white.png" />
                     </div>
                 </div>
             </div>
-        
+
             <div class="preview" id="preview-container">
-                <h4>preview</h4>
                 <div class="layers">
-                    <img src="" alt="base-preview" id="preview-base"/>
+                    <img src="" alt="base-preview" id="preview-base" />
                     <img src="" alt="skin-preview" id="preview-skin" />
                     <img src="" alt="face-preview" id="preview-face" />
                     <img src="" alt="blush-preview" id="preview-blush" />
@@ -128,9 +186,60 @@
                     <img src="" alt="headset-preview" id="preview-headset" />
                     <img src="" alt="bag-preview" id="preview-bag" />
                     <img src="" alt="collar-preview" id="preview-collar" />
-
                 </div>
+                <button id="custom-ready" class="custom-ready">pronto!</button>
             </div>
+
+        </div>
+
+    </div>
+
+    <div id="order-check" style="display: none;">
+        <div class="bx-order-ch">
+            <h3>Que fofo!</h3>
+            <p>agora, confira seu pedido e preencha os dados de envio <br>
+             e entraremos em contato para finalizar o pedido!</p>
+        </div>
+
+        <div class="by-order-ch">
+            <div class="order-final" id="final-order"></div>
+
+            <form id="checkout-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="nome" required />
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="telefone" placeholder="(xx) xxxxx-xxxx" required />
+
+            <label for="comment">Notas:</label>
+            <input type="text" id="comment" name="notas" placeholder="escreva aqui seu recado ou obervação." />
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="xxxxx-xxx" required />
+
+            <label for="street">Endereço:</label>
+            <input type="text" id="street" name="rua" readonly />
+
+            <label for="neighborhood">Bairro:</label>
+            <input type="text" id="neighborhood" name="bairro" readonly />
+
+            <label for="city">Cidade:</label>
+            <input type="text" id="city" name="cidade" readonly />
+
+            <label for="state">Estado:</label>
+            <input type="text" id="state" name="estado" readonly />
+
+            <label for="number">Número:</label>
+            <input type="text" id="number" name="numero" required />
+
+            <label for="complement">Complemento:</label>
+            <input type="text" id="complement" name="complemento" />
+
+            <button type="submit" id="mhtu-st">Solicitar Encomenda</button>
+        </form>
 
         </div>
         
@@ -146,6 +255,8 @@
     </footer>
 
     <script src="main.js"></script>
-    
-    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+
 </html>
