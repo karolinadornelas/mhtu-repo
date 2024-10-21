@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <title>mhtu - custom!!</title>
 </head>
@@ -18,81 +19,117 @@
     <div id="canvas">
         <div class="bx-base">
             <h3>escolha a base</h3>
-            <div id="ch-base">
+            <div id="main-ch">
                 <div class="ch-base">
-                    <img src="/custom/base-miffy.png" alt="">
-                    <button type="button">miffy</button>
+                    <img class="base-option" data-base="miffy" src="miffy custom/base-miffy.png" alt="miffy">
+                    <h5>miffy</h5>
                 </div>
                 <div class="ch-base">
-                    <img src="/custom/base-bunny.png" alt="">
-                    <button type="button">bunny</button>
+                    <img class="base-option" data-base="bunny" src="/custom/base-bunny.png" alt="bunny">
+                    <h5>bunny</h5>
                 </div>
                 <div class="ch-base">
-                    <img src="/custom/base-cat.png" alt="">
-                    <button type="button">catinho</button>
+                    <img class="base-option" data-base="catinho" src="/custom/base-cat.png" alt="catinho">
+                    <h5>catinho</h5>
                 </div>
             </div>
+            
         </div>
         <div id="bx-custom">
             <div class="ch-custom">
             <!-- miffy -->
                 <div class="vitrine" id="vitrine-miffy">
                     <h3>personalize miffy!</h3>
-                    <img class="deco" src="custom/blush-pink.png" />
-                    <img class="face" src="custom/face-black.png" />
-                    <img class="face" src="custom/face-white.png" />
-                    <img class="skin" src="/custom/base-medium.png" />
-                    <img class="skin" src="custom/base-beige.png" />
-                    <img class="skin" src="custom/base-white.png" />
-                    <img class="hoodie" src="custom/hoodie-red.png" />
-                    <img class="hoodie" src="custom/hoodie-blue.png" />
-                    <img class="hoodie" src="custom/hoodie-pink.png" />
-                    <img class="hoodie" src="custom/hoodie-strawberry.png" />
-                    <img class="trinket" src="custom/hdst-bag-black.png" />
-                    <img class="trinket" src="custom/hdst-black-bow.png" />
-                    <img class="trinket" src="custom/hdst-gray-bow.png" />
-                    <img class="trinket" src="custom/hdst-offwhite-bow.png" />
-                    <img class="suit" src="custom/custom-tulip.png" />
-                    <img class="suit" src="custom/custom-bobba.png" />
-                    <img class="suit" src="custom/dress-blue.png" />
+                    <img class="blush" src="miffy custom/blush-m.png" />
+                    <img class="face" src="miffy custom/face-m-black.png" />
+                    <img class="face" src="miffy custom/face-m-white.png" />
+                    <img class="skin" src="miffy custom/base-m-beige.png" />
+                    <img class="skin" src="miffy custom/base-m-white.png" />
+                    <img class="skin" src="miffy custom/base-m-black.png" />
+                    <img class="collar" src="miffy custom/green-m-collar.png" />
+                    <img class="hoodie" src="miffy custom/hoodie-m-red.png" />
+                    <img class="hoodie" src="miffy custom/hoodie-m-blue.png" />
+                    <img class="hoodie" src="miffy custom/hoodie-m-pink.png" />
+                    <img class="hoodie" src="miffy custom/hoodie-m-strawberry.png" />
+                    <img class="suit" src="miffy custom/custom-m-bobba.png" />
+                    <img class="headset" src="miffy custom/hs-m-black.png" />
+                    <img class="headset" src="miffy custom/hs-gray.png" />
+                    <img class="headset" src="miffy custom/hs-white.png" />
+                    <img class="headset" src="miffy custom/hdst-black-bow.png" />
+                    <img class="headset" src="miffy custom/hdst-gray-bow.png" />
+                    <img class="headset" src="miffy custom/hdst-offwhite-bow.png" />
+                    <img class="headset" src="miffy custom/bows.png" />
+                    <img class="deco" src="miffy custom/x-deco-black-left.png" />
+                    <img class="deco" src="miffy custom/x-deco-black-right.png" />
+                    <img class="deco" src="miffy custom/x-deco-white-left.png" />
+                    <img class="deco" src="miffy custom/x-deco-white-right.png" />
+                    <img class="trinket" src="miffy custom/custom-ribbon.png" />
+                    <img class="suit" src="miffy custom/deco-m-tulips.png" />
+                    <img class="suit" src="miffy custom/dress-m-blue.png" />
+                    <img class="suit" src="miffy custom/dress-m-red.png" />
+                    <img class="suit" src="miffy custom/dress-m-pink.png" />
+                    <img class="suit" src="miffy custom/dress-m-dotted.png" />
+                    <img class="acessory" src="miffy custom/deco-coffee.png" />
+                    <img class="acessory" src="miffy custom/deco-sweet.png" />
+                    <img class="bag" src="miffy custom/bag-m-brown.png" />
+                    <img class="bag" src="miffy custom/bag-m-pink.png" />
+                    <img class="bag" src="miffy custom/bag-m-red.png" />
                 </div>
         
-                <!-- bunny -->
+                <!-- bunny-->
                 <div class="vitrine" id="vitrine-bunny">
                     <h3>personalize bunny!</h3>
-                    <img class="skin" src="/custom/base-b-balck.png" />
-                    <img class="skin" src="custom/base-b-medium.png" />
-                    <img class="skin" src="custom/base-b-white.png" />
-                    <img class="hoodie" src="custom/hoodie-b-strawberry.png" />
-                    <img class="hoodie" src="custom/hoodie-b-blue.png" />
-                    <img class="hoodie" src="custom/hoodie-b-pink.png" />
-                    <img class="hoodie" src="custom/hoodie-red-bunny.png" />
-                    <img class="trinket" src="custom/green-collar.png" />
-                    <img class="trinket" src="custom/green-crown.png" />
-                    <img class="trinket" src="custom/green-leafs.png" />
-                    <img class="trinket" src="custom/green-sprout.png" />
+                    <div class="wardrobe">
+                        <img class="skin" src="/custom/base-b-balck.png" />
+                        <img class="skin" src="custom/base-b-medium.png" />
+                        <img class="skin" src="custom/base-b-white.png" />
+                        <img class="hoodie" src="custom/hoodie-b-strawberry.png" />
+                        <img class="hoodie" src="custom/hoodie-b-blue.png" />
+                        <img class="hoodie" src="custom/hoodie-b-pink.png" />
+                        <img class="hoodie" src="custom/hoodie-red-bunny.png" />
+                        <img class="trinket" src="custom/green-collar.png" />
+                        <img class="trinket" src="custom/green-crown.png" />
+                        <img class="trinket" src="custom/green-leafs.png" />
+                        <img class="trinket" src="custom/green-sprout.png" />
+                    </div>
                 </div>
                 
                 <!-- catinho -->
                 <div class="vitrine" id="vitrine-catinho">
                     <h3>personalize catinho!</h3>
-                    <img class="trinket" src="custom/green-collar.png" />
-                    <img class="trinket" src="custom/green-crown.png" />
-                    <img class="trinket" src="custom/green-leafs.png" />
-                    <img class="trinket" src="custom/green-sprout.png" />
-                    <img class="skin" src="/custom/base-b-balck.png" />
-                    <img class="skin" src="custom/base-b-medium.png" />
-                    <img class="skin" src="custom/base-b-white.png" />
-                    <img class="hoodie" src="custom/hoodie-c-strawberry.png" />
-                    <img class="hoodie" src="custom/hoodie-c-blue.png" />
-                    <img class="hoodie" src="custom/hoodie-c-pink.png" />
-                    <img class="hoodie" src="custom/hoodie-red-cat.png" />
+                    <div class="wardrobe">
+                        <img class="trinket" src="custom/green-collar.png" />
+                        <img class="trinket" src="custom/green-crown.png" />
+                        <img class="trinket" src="custom/green-leafs.png" />
+                        <img class="trinket" src="custom/green-sprout.png" />
+                        <img class="skin" src="/custom/base-b-balck.png" />
+                        <img class="skin" src="custom/base-b-medium.png" />
+                        <img class="skin" src="custom/base-b-white.png" />
+                        <img class="hoodie" src="custom/hoodie-c-strawberry.png" />
+                        <img class="hoodie" src="custom/hoodie-c-blue.png" />
+                        <img class="hoodie" src="custom/hoodie-c-pink.png" />
+                        <img class="hoodie" src="custom/hoodie-red-cat.png" />
+                    </div>
                 </div>
             </div>
         
-            <div class="preview" id="preview">
+            <div class="preview" id="preview-container">
                 <h4>preview</h4>
-                <img src="" alt="preview-image" id="preview-image" />
+                <div class="layers">
+                    <img src="" alt="base-preview" id="preview-base"/>
+                    <img src="" alt="skin-preview" id="preview-skin" />
+                    <img src="" alt="face-preview" id="preview-face" />
+                    <img src="" alt="blush-preview" id="preview-blush" />
+                    <img src="" alt="hoodie-preview" id="preview-hoodie" />
+                    <img src="" alt="trinket-preview" id="preview-trinket" />
+                    <img src="" alt="suit-preview" id="preview-suit" />
+                    <img src="" alt="deco-preview" id="preview-deco" />
+                    <img src="" alt="acessory-preview" id="preview-acessory" />
+                    <img src="" alt="headset-preview" id="preview-headset" />
+                    <img src="" alt="bag-preview" id="preview-bag" />
+                    <img src="" alt="collar-preview" id="preview-collar" />
+
+                </div>
             </div>
 
         </div>
@@ -100,8 +137,12 @@
     </div>
 
     <footer>
-        <p>@mhtu.zip</p>
-        <p>@karolinadornelas</p>
+        <div class="nav-links">
+            <p><strong>info!</strong></p>
+            <a href="https://www.instagram.com/mhtu.zip/"><i class="fa-brands fa-instagram"></i>instagram</a>
+            <a href="https://github.com/karolinadornelas"><i class="fa-brands fa-github"></i>github</a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i>whatsapp</a>
+        </div>
     </footer>
 
     <script src="main.js"></script>
