@@ -232,6 +232,18 @@ function generatePdf() {
 
 }
 
+function showCategory(category) {
+  const categories = document.querySelectorAll('.category');
+  categories.forEach(cat => cat.classList.remove('active'));
+
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  tabBtns.forEach(btn => btn.classList.remove('active'));
+
+  document.getElementById(category).classList.add('active');
+  event.target.classList.add('active');
+}
+
+
 // //emailjs
 
 // (function(){

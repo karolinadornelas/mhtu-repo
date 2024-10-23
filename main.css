@@ -33,7 +33,7 @@ header img {
     position: relative;
 }
 
-#content{
+#content {
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -52,7 +52,7 @@ header img {
     width: 450px;
 }
 
-.bx-order-ch{
+.bx-order-ch {
     padding: 15px;
 }
 
@@ -132,7 +132,7 @@ header img {
     margin: 10px;
 }
 
-#canvas{
+#canvas {
     font-family: "Jua", sans-serif;
 
 }
@@ -266,13 +266,13 @@ form button:hover {
     font-family: "Jua", sans-serif;
 }
 
-#final-order{
+#final-order {
     height: 380px;
 }
 
 label {
     font-weight: bold;
-    font-family: 'Quicksand',sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 15px;
 }
 
@@ -284,15 +284,50 @@ input {
     padding: 10px;
     margin: 5px;
     font-size: 15px;
-    font-family: 'Quicksand',sans-serif;
+    font-family: 'Quicksand', sans-serif;
 }
 
 #name {
     text-transform: capitalize;
 }
 
-#comment{
+#comment {
     height: 100px;
+}
+
+/*tabs*/
+
+.tabs {
+    display: flex;
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background-color: lightgray;
+}
+
+.tab-btn.active {
+    background-color: white;
+    border-bottom: 2px solid black;
+}
+
+.tab-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    display: none;
+}
+
+.category.active {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 footer {
