@@ -487,7 +487,9 @@ footer {
     #vitrine-catinho {
         width: 370px;
         margin-left: 0;
-        margin-top: 125px;
+        margin-left: -15px;
+        margin-top: 155px;
+        height: fit-content;
     }
 
     .tabs {
@@ -500,11 +502,27 @@ footer {
         max-width: 760px;
     }
 
-    .tab-content{
-        max-width: 280px;
+    .tab-content {
+        max-width: 780px;
+        height: auto;
+        overflow-x: auto;
+        max-width: 760px;
     }
 
-    .tabs::-webkit-scrollbar {
+    #mensagem-abaixo {
+        margin-top: 220px;
+        position: absolute;
+        width: 380px;
+    }
+
+    .category.active {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 3px;
+        overflow: hidden;
+    }
+
+    .category::-webkit-scrollbar {
         width: 12px;
         height: 8px;
     }
@@ -523,10 +541,4 @@ footer {
         background-color: var(--melon);
     }
 
-    #mensagem-abaixo {
-        margin-top: 220px;
-        position: absolute;
-        width: 380px;
-    }
-    
 }
