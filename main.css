@@ -362,10 +362,10 @@ ul {
     flex-direction: row;
 }
 
-#mensagem-abaixo {
-    margin-top: 240px;
-    position: absolute;
-    width: 350px;
+.vitrine p {
+    font-size: 12px;
+    position: relative;
+    font-family:"quicksand";
 }
 
 .category {
@@ -507,12 +507,6 @@ footer {
         height: auto;
         overflow-x: auto;
         max-width: 760px;
-    }
-
-    #mensagem-abaixo {
-        margin-top: 220px;
-        position: absolute;
-        width: 380px;
     }
 
     .category.active {
