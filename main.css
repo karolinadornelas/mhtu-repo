@@ -247,6 +247,7 @@ form button {
     margin: 10px;
     cursor: pointer;
     font-family: "Jua", sans-serif;
+    z-index: 10;
 }
 
 .custom-ready:hover,
@@ -309,6 +310,7 @@ ul {
     border-bottom: 2px solid var(--inred);
     margin-bottom: 10px;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .tabs::-webkit-scrollbar {
