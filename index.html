@@ -24,16 +24,16 @@
     </header>
     <nav class="navbar">
         <div class="bx-nav">
-            <a href="info.html">inicio</a>
+            <!-- <a href="info.html">inicio</a> -->
             <a href="index.html">custom</a>
 
-            <div class="dropdown">
+            <!-- <div class="dropdown">
                 <button class="dropdown-btn">produtos</button>
                 <div class="dropdown-content">
                     <a href="#">biscuit</a>
                     <a href="#">croche</a>
-                </div>
-            </div>
+                </div> 
+            </div>-->
 
             <a href="#">sobre</a>
             <a href="">q&a</a>
@@ -58,30 +58,30 @@
                     <h5>catinho</h5>
                 </div>
             </div>
-
         </div>
+        
         <div id="bx-custom">
             <div class="ch-custom">
                 <!-- miffy -->
                 <div class="vitrine" id="vitrine-miffy">
                     <h3>personalize miffy!</h3>
                     <div class="tabs">
-                        <button class="tab-btn active" onclick="showCategory('b-face')"><img class="bx-img" src="custom/bx-face.png" alt=""></button>
-                        <button class="tab-btn" onclick="showCategory('b-skin')"><img class="bx-img" src="custom/bx-hood.png" alt=""></button>
-                        <button class="tab-btn" onclick="showCategory('b-hoodie')"><img class="bx-img" src="custom/bx-hood.png" alt=""></button>
-                        <button class="tab-btn" onclick="showCategory('b-acc')"><img class="bx-img" src="custom/bx-acc.png" alt=""></button>
-                        <button class="tab-btn" onclick="showCategory('b-clothes')"><img class="bx-img" src="custom/bx-dress.png" alt=""></button>
-                        <button class="tab-btn" onclick="showCategory('b-custom')"><img class="bx-img" src="custom/bx-custom.png" alt=""></button>
-                        <button class="tab-btn" onclick="showCategory('b-deco')"><img class="bx-img" src="custom/bx-leaf.png" alt=""></button>
-                        <button class="tab-btn" onclick="showCategory('b-ax')"><img class="bx-img" src="custom/bx-hood.png" alt=""></button>
+                        <button class="tab-btn active" onclick="showCategory('b-skin')">base</button>
+                        <button class="tab-btn" onclick="showCategory('b-face')">rostinho</button>
+                        <button class="tab-btn" onclick="showCategory('b-hoodie')">capuz</button>
+                        <button class="tab-btn" onclick="showCategory('b-acc')">acessorios</button>
+                        <button class="tab-btn" onclick="showCategory('b-clothes')">roupas</button>
+                        <button class="tab-btn" onclick="showCategory('b-custom')">fantasias</button>
+                        <button class="tab-btn" onclick="showCategory('b-deco')">decorações</button>
+                        <button class="tab-btn" onclick="showCategory('b-ax')">porcelana</button>
                     </div>
                     <div class="tab-content">
-                        <div id="b-face" class="category active">
+                        <div id="b-face" class="category">
                             <img class="blush" src="miffy custom/blush-m.png" />
                             <img class="face" src="miffy custom/face-m-black.png" />
                             <img class="face" src="miffy custom/face-m-white.png" />
                         </div>
-                        <div id="b-skin" class="category">
+                        <div id="b-skin" class="category active">
                             <img class="skin" src="miffy custom/base-m-beige.png" />
                             <img class="skin" src="miffy custom/base-m-white.png" />
                             <img class="skin" src="miffy custom/base-m-black.png" />
@@ -100,35 +100,42 @@
                             <img class="headset" src="miffy custom/hdst-gray-bow.png" />
                             <img class="headset" src="miffy custom/hdst-offwhite-bow.png" />
                             <img class="headset" src="miffy custom/bows.png" />
+                            <img class="bag" src="miffy custom/bag-m-black.png" />
+                            <img class="bag" src="miffy custom/bag-m-brown.png" />
+                            <img class="bag" src="miffy custom/bag-m-pink.png" />
+                            <img class="bag" src="miffy custom/bag-m-red.png" />
+                            <img class="bag" src="miffy custom/hdst-bag-black.png" />
                         </div>
                         <div id="b-clothes" class="category ">
                             <img class="suit" src="miffy custom/deco-m-tulips.png" />
                             <img class="suit" src="miffy custom/dress-m-blue.png" />
                             <img class="suit" src="miffy custom/dress-m-red.png" />
-                            <img class="suit" src="miffy custom/dress-m-pink.png" />
+                            <img class="suit" src="miffy custom/dress-m-red.png" />
+                            <img class="suit" src="miffy custom/dress-m-btn.png" />
                             <img class="suit" src="miffy custom/dress-m-dotted.png" />
                         </div>
                         <div id="b-custom" class="category ">
                             <img class="suit" src="miffy custom/custom-m-bobba.png" />
+                            <img class="suit" src="miffy custom/custom-m-marceline.png" />
+                            <img class="suit" src="miffy custom/custom-m-bee.png" />
+                            <img class="suit" src="miffy custom/custom-str.png" />
                         </div>
                         <div id="b-deco" class="category ">
+                            <img class="trinket" src="miffy custom/green-m-collar.png" />
                             <img class="deco" src="miffy custom/x-deco-black-left.png" />
                             <img class="deco" src="miffy custom/x-deco-black-right.png" />
                             <img class="deco" src="miffy custom/x-deco-white-left.png" />
                             <img class="deco" src="miffy custom/x-deco-white-right.png" />
                             <img class="trinket" src="miffy custom/custom-ribbon.png" />
                         </div>
-                        <div id="b-custom" class="category ">
-                            <img class="suit" src="miffy custom/custom-m-bobba.png" />
-                        </div>
                         <div id="b-ax" class="category ">
-                            <img class="collar" src="miffy custom/green-m-collar.png" />
                             <img class="acessory" src="miffy custom/deco-coffee.png" />
                             <img class="acessory" src="miffy custom/deco-sweet.png" />
-                            <img class="bag" src="miffy custom/bag-m-brown.png" />
-                            <img class="bag" src="miffy custom/bag-m-pink.png" />
-                            <img class="bag" src="miffy custom/bag-m-red.png" />
-                            <img class="bag" src="miffy custom/hdst-bag-black.png" />
+                            <img class="acessory" src="miffy custom/deco-berry.png" />
+                            <img class="acessory" src="miffy custom/dec-pops.png" />
+                            <img class="acessory" src="miffy custom/dec-yakult.png" />
+                            <img class="acessory" src="miffy custom/dec-star.png" />
+                            <p id="mensagem-abaixo">Os acessórios de mão são feitos de porcelana fria, com acabamento em resina UV.</p>
                         </div>
                     </div>
                     
@@ -137,170 +144,112 @@
                 <!-- bunny-->
                 <div class="vitrine" id="vitrine-bunny">
                     <h3>personalize bunny!</h3>
-                    <div class="wardrobe">
-                        <img class="blush" src="/bunny-catinho custom/blush-b.png" />
-                        <img class="face" src="/bunny-catinho custom/face-b-black.png" />
-                        <img class="skin" src="/bunny-catinho custom/base-b-beige.png" />
-                        <img class="skin" src="/bunny-catinho custom/base-b-black.png" />
-                        <img class="trinket" src="/bunny-catinho custom/collar-b-gray.png" />
-                        <img class="trinket" src="/bunny-catinho custom/green-collar.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-black.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-blue.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-pink.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-soft-pink.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-red.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-green.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-eucalipt.png" />
-                        <img class="headset" src="/bunny-catinho custom/dress-b-lime.png" />
-                        <img class="deco" src="/bunny-catinho custom/leaf-1.png" />
-                        <img class="deco" src="/bunny-catinho custom/leaf-2.png" />
-                        <img class="deco" src="/bunny-catinho custom/leaf-3.png" />
-                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-pink.png" />
-                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-soft-pink.png" />
-                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-strawberry.png" />
-                        <img class="hoodie" src="/bunny-catinho custom/hoodie-b-red.png" />
-                        <img class="headset" src="" />
-                        <img class="trinket" src="/bunny-catinho custom/bow-b-red.png" />
-                        <img class="acessory" src="" />
-                        <img class="bag" src="/bunny-catinho custom/bag-b-black.png" />
-                        <img class="bag" src="/bunny-catinho custom/bag-b-red.png" />
-                        <img class="bag" src="/bunny-catinho custom/bag-b-pink.png" />
-                        <img class="bag" src="/bunny-catinho custom/bag-b-white.png" />
-                    </div>
-                </div>
-
-                <!-- catinho -->
-                <div class="vitrine" id="vitrine-catinho">
-                    <h3>personalize catinho!</h3>
                     <div class="tabs">
-                        <button class="tab-btn active" onclick="showCategory('b-face')">cabeça</button>
-                        <button class="tab-btn" onclick="showCategory('b-skin')">corpo</button>
-                        <button class="tab-btn" onclick="showCategory('b-hoodie')">capuz</button>
-                        <button class="tab-btn" onclick="showCategory('b-acc')">acessorios</button>
-                        <button class="tab-btn" onclick="showCategory('b-clothes')">vestido</button>
-                        <button class="tab-btn" onclick="showCategory('b-custom')">conjunto</button>
-                        <button class="tab-btn" onclick="showCategory('b-deco')">decoracao</button>
-                        <button class="tab-btn" onclick="showCategory('b-ax')">decoracao</button>
+                        <button class="tab-btn active" onclick="showCategory('bb-skin')">base</button>
+                        <button class="tab-btn" onclick="showCategory('bb-face')">rostinho</button>
+                        <button class="tab-btn" onclick="showCategory('bb-hoodie')">capuz</button>
+                        <button class="tab-btn" onclick="showCategory('bb-acc')">acessorios</button>
+                        <button class="tab-btn" onclick="showCategory('bb-clothes')">roupas</button>
+                        <button class="tab-btn" onclick="showCategory('bb-deco')">decorações</button>
+                        <button class="tab-btn" onclick="showCategory('bb-ax')">objetos</button>
                     </div>
                     <div class="tab-content">
-                        <div id="b-face" class="category active">
-                            <img class="blush" src="bunny-catinho custom/blush-b.png.png" />
-                            <img class="face" src="bunny-catinho custom/face-b-black.png.png" />
-                            <img class="face" src="bunny-catinho custom/face-b-white.png" />
-                        </div>
-                        <div id="b-skin" class="category">
+                        <div id="bb-skin" class="category active">
                             <img class="skin" src="bunny-catinho custom/base-b-beige.png" />
                             <img class="skin" src="bunny-catinho custom/base-b-white.png" />
                             <img class="skin" src="bunny-catinho custom/base-b-black.png" />
                         </div>
-                        <div id="b-hoodie" class="category ">
+                        <div id="bb-face" class="category">
+                            <img class="blush" src="bunny-catinho custom/blush-b.png" />
+                            <img class="face" src="bunny-catinho custom/face-b-black.png" />
+                            <img class="face" src="bunny-catinho custom/face-b-white.png" />
+                        </div>
+                        <div id="bb-hoodie" class="category ">
                             <img class="hoodie" src="bunny-catinho custom/hoodie-b-red.png" />
-                            <img class="hoodie" src="bunny-catinho custom/hoodie-b-blue.png" />
                             <img class="hoodie" src="bunny-catinho custom/hoodie-b-pink.png" />
-                            <div class="tabs">
-                                <button class="tab-btn active" onclick="showCategory('b-face')">cabeça</button>
-                                <button class="tab-btn" onclick="showCategory('b-skin')">corpo</button>
-                                <button class="tab-btn" onclick="showCategory('b-hoodie')">capuz</button>
-                                <button class="tab-btn" onclick="showCategory('b-acc')">acessorios</button>
-                                <button class="tab-btn" onclick="showCategory('b-clothes')">vestido</button>
-                                <button class="tab-btn" onclick="showCategory('b-custom')">conjunto</button>
-                                <button class="tab-btn" onclick="showCategory('b-deco')">decoracao</button>
-                                <button class="tab-btn" onclick="showCategory('b-ax')">decoracao</button>
-                            </div>
-                            <div class="tab-content">
-                                <div id="b-face" class="category active">
-                                    <img class="blush" src="miffy custom/blush-m.png" />
-                                    <img class="face" src="miffy custom/face-m-black.png" />
-                                    <img class="face" src="miffy custom/face-m-white.png" />
-                                </div>
-                                <div id="b-skin" class="category">
-                                    <img class="skin" src="miffy custom/base-m-beige.png" />
-                                    <img class="skin" src="miffy custom/base-m-white.png" />
-                                    <img class="skin" src="miffy custom/base-m-black.png" />
-                                </div>
-                                <div id="b-hoodie" class="category ">
-                                    <img class="hoodie" src="miffy custom/hoodie-m-red.png" />
-                                    <img class="hoodie" src="miffy custom/hoodie-m-blue.png" />
-                                    <img class="hoodie" src="miffy custom/hoodie-m-pink.png" />
-                                    <img class="hoodie" src="miffy custom/hoodie-m-strawberry.png" />
-                                </div>
-                                <div id="b-acc" class="category ">
-                                    <img class="headset" src="miffy custom/hs-m-black.png" />
-                                    <img class="headset" src="miffy custom/hs-gray.png" />
-                                    <img class="headset" src="miffy custom/hs-white.png" />
-                                    <img class="headset" src="miffy custom/hdst-black-bow.png" />
-                                    <img class="headset" src="miffy custom/hdst-gray-bow.png" />
-                                    <img class="headset" src="miffy custom/hdst-offwhite-bow.png" />
-                                    <img class="headset" src="miffy custom/bows.png" />
-                                </div>
-                                <div id="b-clothes" class="category ">
-                                    <img class="suit" src="miffy custom/deco-m-tulips.png" />
-                                    <img class="suit" src="miffy custom/dress-m-blue.png" />
-                                    <img class="suit" src="miffy custom/dress-m-red.png" />
-                                    <img class="suit" src="miffy custom/dress-m-pink.png" />
-                                    <img class="suit" src="miffy custom/dress-m-dotted.png" />
-                                </div>
-                                <div id="b-custom" class="category ">
-                                    <img class="suit" src="miffy custom/custom-m-bobba.png" />
-                                </div>
-                                <div id="b-deco" class="category ">
-                                    <img class="deco" src="miffy custom/x-deco-black-left.png" />
-                                    <img class="deco" src="miffy custom/x-deco-black-right.png" />
-                                    <img class="deco" src="miffy custom/x-deco-white-left.png" />
-                                    <img class="deco" src="miffy custom/x-deco-white-right.png" />
-                                    <img class="trinket" src="miffy custom/custom-ribbon.png" />
-                                </div>
-                                <div id="b-custom" class="category ">
-                                    <img class="suit" src="miffy custom/custom-m-bobba.png" />
-                                </div>
-                                <div id="b-ax" class="category ">
-                                    <img class="collar" src="miffy custom/green-m-collar.png" />
-                                    <img class="acessory" src="miffy custom/deco-coffee.png" />
-                                    <img class="acessory" src="miffy custom/deco-sweet.png" />
-                                    <img class="bag" src="miffy custom/bag-m-brown.png" />
-                                    <img class="bag" src="miffy custom/bag-m-pink.png" />
-                                    <img class="bag" src="miffy custom/bag-m-red.png" />
-                                    <img class="bag" src="miffy custom/hdst-b.png" />
-                                </div>
-                            </div>
-                            <img class="hoodie" src="bunny-catinho custom/hoodie-m-strawberry.png" />
+                            <img class="hoodie" src="bunny-catinho custom/hoodie-b-soft-pink.png" />
+                            <img class="hoodie" src="bunny-catinho custom/hoodie-b-strawberry.png" />
                         </div>
-                        <div id="b-acc" class="category ">
-                            <img class="headset" src="bunny-catinho custom/hs-m-black.png" />
-                            <img class="headset" src="bunny-catinho custom/hs-gray.png" />
-                            <img class="headset" src="bunny-catinho custom/hs-white.png" />
-                            <img class="headset" src="bunny-catinho custom/hdst-black-bow.png" />
-                            <img class="headset" src="bunny-catinho custom/hdst-gray-bow.png" />
-                            <img class="headset" src="bunny-catinho custom/hdst-offwhite-bow.png" />
-                            <img class="headset" src="bunny-catinho custom/bows.png" />
+                        <div id="bb-acc" class="category ">
+                            <img class="trinket" src="bunny-catinho custom/bow-b-red.png" />
+                            <img class="acessory" src="bunny-catinho custom/leaf-1.png" />
+                            <img class="acessory" src="bunny-catinho custom/leaf-2.png" />
+                            <img class="acessory" src="bunny-catinho custom/leaf-3.png" />
+                            <img class="trinket" src="bunny-catinho custom/green-collar.png" />
+
                         </div>
-                        <div id="b-clothes" class="category ">
-                            <img class="suit" src="bunny-catinho custom/dress-m-blue.png" />
-                            <img class="suit" src="bunny-catinho custom/dress-m-red.png" />
-                            <img class="suit" src="bunny-catinho custom/dress-m-pink.png" />
-                            <img class="suit" src="bunny-catinho custom/dress-m-dotted.png" />
+                        <div id="bb-clothes" class="category ">
+                            <img class="deco" src="bunny-catinho custom/dress-b-black.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-pink.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-soft-pink.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-red.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-green.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-lime.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-eucalipt.png" />
+
                         </div>
-                        <div id="b-custom" class="category ">
-                            <img class="suit" src="bunny-catinho custom/custom-m-bobba.png" />
+                        <div id="bb-ax" class="category ">
+                            <img class="bag" src="bunny-catinho custom/bag-b-black.png" />
+                            <img class="bag" src="bunny-catinho custom/bag-b-pink.png" />
+                            <img class="bag" src="bunny-catinho custom/bag-b-red.png" />
+                            <img class="bag" src="bunny-catinho custom/bag-b-white.png" />
                         </div>
-                        <div id="b-deco" class="category ">
-                            <img class="deco" src="bunny-catinho custom/x-deco-black-left.png" />
-                            <img class="deco" src="bunny-catinho custom/x-deco-black-right.png" />
-                            <img class="deco" src="bunny-catinho custom/x-deco-white-left.png" />
-                            <img class="deco" src="bunny-catinho custom/x-deco-white-right.png" />
-                            <img class="trinket" src="bunny-catinho custom/custom-ribbon.png" />
+                    </div>
+                    
+                </div>
+                <!-- catinho -->
+                <div class="vitrine" id="vitrine-catinho">
+                    <h3>personalize catinho!</h3>
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="showCategory('bbc-skin')">base</button>
+                        <button class="tab-btn" onclick="showCategory('bbc-face')">rostinho</button>
+                        <button class="tab-btn" onclick="showCategory('bbc-hoodie')">capuz</button>
+                        <button class="tab-btn" onclick="showCategory('bbc-acc')">acessorios</button>
+                        <button class="tab-btn" onclick="showCategory('bbc-clothes')">roupas</button>
+                        <button class="tab-btn" onclick="showCategory('bbc-deco')">decorações</button>
+                        <button class="tab-btn" onclick="showCategory('bbc-ax')">objetos</button>
+                    </div>
+                    <div class="tab-content">
+                        <div id="bbc-skin" class="category active">
+                            <img class="skin" src="bunny-catinho custom/base-b-beige.png" />
+                            <img class="skin" src="bunny-catinho custom/base-b-white.png" />
+                            <img class="skin" src="bunny-catinho custom/base-b-black.png" />
                         </div>
-                        <div id="b-custom" class="category ">
-                            <img class="suit" src="bunny-catinho custom/custom-m-bobba.png" />
+                        <div id="bbc-face" class="category">
+                            <img class="blush" src="bunny-catinho custom/blush-b.png" />
+                            <img class="face" src="bunny-catinho custom/face-b-black.png" />
+                            <img class="face" src="bunny-catinho custom/face-b-white.png" />
                         </div>
-                        <div id="b-ax" class="category ">
-                            <img class="collar" src="bunny-catinho custom/green-m-collar.png" />
-                            <img class="acessory" src="bunny-catinho custom/deco-coffee.png" />
-                            <img class="acessory" src="bunny-catinho custom/deco-sweet.png" />
-                            <img class="bag" src="bunny-catinho custom/bag-m-brown.png" />
-                            <img class="bag" src="bunny-catinho custom/bag-m-pink.png" />
-                            <img class="bag" src="bunny-catinho custom/bag-m-red.png" />
-                            <img class="bag" src="bunny-catinho custom/hdst-bag-black.png" />
+                        <div id="bbc-hoodie" class="category ">
+                            <img class="hoodie" src="bunny-catinho custom/hoodie-c-red.png" />
+                            <img class="hoodie" src="bunny-catinho custom/hoodie-c-pink.png" />
+                            <img class="hoodie" src="bunny-catinho custom/hoodie-c-brown.png" />
+                            <img class="hoodie" src="bunny-catinho custom/hoodie-c-soft-pink.png" />
+                            <img class="hoodie" src="bunny-catinho custom/hoodie-c-strawberry.png" />
+                        </div>
+                        <div id="bbc-acc" class="category ">
+                            <img class="trinket" src="bunny-catinho custom/bow-b-red.png" />
+                            <img class="acessory" src="bunny-catinho custom/leaf-1.png" />
+                            <img class="acessory" src="bunny-catinho custom/leaf-2.png" />
+                            <img class="acessory" src="bunny-catinho custom/leaf-3.png" />
+                            <img class="trinket" src="bunny-catinho custom/green-collar.png" />
+
+                        </div>
+                        <div id="bbc-clothes" class="category ">
+                            <img class="deco" src="bunny-catinho custom/dress-b-black.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-pink.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-soft-pink.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-red.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-green.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-lime.png" />
+                            <img class="deco" src="bunny-catinho custom/dress-b-eucalipt.png" />
+
+                        </div>
+                        <div id="bbc-ax" class="category ">
+                            <img class="bag" src="bunny-catinho custom/bag-b-black.png" />
+                            <img class="bag" src="bunny-catinho custom/bag-b-pink.png" />
+                            <img class="bag" src="bunny-catinho custom/bag-b-red.png" />
+                            <img class="bag" src="bunny-catinho custom/bag-b-white.png" />
                         </div>
                     </div>
                 </div>
@@ -323,9 +272,7 @@
                 </div>
                 <button id="custom-ready" class="custom-ready">pronto!</button>
             </div>
-
         </div>
-
     </div>
 
     <div id="order-check" style="display: none;">

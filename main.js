@@ -239,10 +239,10 @@ function showCategory(category) {
   const tabBtns = document.querySelectorAll('.tab-btn');
   tabBtns.forEach(btn => btn.classList.remove('active'));
 
+  
   document.getElementById(category).classList.add('active');
   event.target.classList.add('active');
 }
-
 
 // //emailjs
 
