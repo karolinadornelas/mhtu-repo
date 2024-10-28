@@ -459,6 +459,9 @@ footer {
 
 @media (max-width: 768px) {
 
+    #canvas{
+        max-width: 760px;
+    }
     #bx-custom {
         display: flex;
         flex-direction: column-reverse;
