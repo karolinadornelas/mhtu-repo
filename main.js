@@ -90,6 +90,21 @@ vitrineImages.forEach((img) => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Seleciona todos os elementos com a classe 'base-option'
+  const baseOptions = document.querySelectorAll(".base-option");
+  const bxCustom = document.getElementById("bx-custom");
+
+  // Adiciona um evento de clique em cada base
+  baseOptions.forEach(option => {
+      option.addEventListener("click", () => {
+          // Torna o bx-custom visível ao escolher uma base
+          bxCustom.style.display = "flex";
+      });
+  });
+});
+
+
 /*cep config*/
 
 document.getElementById('cep').addEventListener('blur', async () => {

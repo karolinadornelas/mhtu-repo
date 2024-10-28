@@ -16,6 +16,7 @@
 body {
     background-color: var(--inst);
     color: #333;
+    min-height: 100vh;
 }
 
 header {
@@ -33,8 +34,10 @@ header img {
     position: relative;
 }
 
-#content {
+#canvas {
     font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+
 }
 
 .navbar {
@@ -465,6 +468,10 @@ footer {
         font-family: "Jua", sans-serif;
     }
 
+    #main-ch img{
+        width: 85px;
+    }
+
     .preview {
         width: 250px;
         text-align: center;
@@ -476,5 +483,14 @@ footer {
     #vitrine-catinho {
         width: 85%;
         margin-top: 125px;
+    }
+
+    .tabs {
+        display: flex;
+        border-radius: 7px;
+        border-bottom: 2px solid var(--inred);
+        margin-bottom: 10px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
