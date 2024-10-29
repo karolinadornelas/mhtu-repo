@@ -91,14 +91,12 @@ vitrineImages.forEach((img) => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  // Seleciona todos os elementos com a classe 'base-option'
   const baseOptions = document.querySelectorAll(".base-option");
   const bxCustom = document.getElementById("bx-custom");
 
-  // Adiciona um evento de clique em cada base
+  //as customizações ficam visíveis apenas ao clicar em uma base
   baseOptions.forEach(option => {
-      option.addEventListener("click", () => {
-          // Torna o bx-custom visível ao escolher uma base
+      option.addEventListener("click", () =>
           bxCustom.style.display = "flex";
       });
   });
