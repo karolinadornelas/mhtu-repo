@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   //as customizações ficam visíveis apenas ao clicar em uma base
   baseOptions.forEach(option => {
-      option.addEventListener("click", () =>
+      option.addEventListener("click", () => {
           bxCustom.style.display = "flex";
       });
   });
