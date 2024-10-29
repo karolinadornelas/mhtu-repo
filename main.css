@@ -460,7 +460,7 @@ footer {
 @media (max-width: 768px) {
 
     #canvas {
-        max-width: 760px;
+        max-width: 760px !important;
     }
 
     #bx-custom {
