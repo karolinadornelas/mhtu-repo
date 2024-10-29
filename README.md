@@ -19,3 +19,7 @@ O usuário pode escolher a base da pelúcia, a cor, as vestimentas e outros aces
 - ViaCEP API
 - html2pdf.js
 - EmailJS
+
+
+https://github.com/user-attachments/assets/29533128-c49b-4f29-a47d-ed9e73cf59f6
+
