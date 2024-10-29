@@ -461,6 +461,7 @@ footer {
 
     #canvas {
         max-width: 760px !important;
+        overflow-x: hidden;
     }
 
     #bx-custom {
