@@ -189,20 +189,21 @@ function generatePdf() {
             position: sticky-top;
           }
           #order-report {
-            padding: 10px;
+            padding: 5px;
             display: flex;
             flex-direction: column;
             font-family: "Quicksand", sans-serif;
 
           }
           .st-order{
-          display:flex;
+            display:flex;
+            justify-content: space-evenly;
           }
           .form-field {
-            margin-top: 105px;
+            margin-top: 45px;
           }
           .form-field-date{
-            margin-top: 75px;
+            margin-top: 20px;
             position: absolute;
           }
         </style>
@@ -218,7 +219,8 @@ function generatePdf() {
               <span>${tempOrderCheck.innerHTML}</span>
               <div class="form-field">${formContent}</div>
             </div>
-          <div class="form-field-date">${dateElement.outerHTML}</div>
+            
+            <div class="form-field-date">${dateElement.outerHTML}</div>
 
           </div>
 
