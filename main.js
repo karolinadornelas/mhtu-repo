@@ -215,8 +215,9 @@ function generatePdf() {
               <div class="form-field">${formContent}</div>
             </div>
 
-            <div class="form-field">${dateElement.outerHTML}</div>
           </div>
+          <div class="form-field">${dateElement.outerHTML}</div>
+
         </div>
     `;
 
