@@ -186,7 +186,7 @@ function generatePdf() {
             color: #b34a12;
             padding: 5px;
             text-align: center;
-            position: fixed;
+            position: sticky-top;
           }
           #order-report {
             padding: 20px;
