@@ -199,7 +199,7 @@ function generatePdf() {
           display:flex;
           }
           .form-field {
-            margin: 10px;
+            margin-top: 105px;
           }
         </style>
 
@@ -214,9 +214,9 @@ function generatePdf() {
               <span>${tempOrderCheck.innerHTML}</span>
               <div class="form-field">${formContent}</div>
             </div>
+          <div class="form-field">${dateElement.outerHTML}</div>
 
           </div>
-          <div class="form-field">${dateElement.outerHTML}</div>
 
         </div>
     `;
