@@ -229,7 +229,7 @@ function generatePdf() {
     filename: 'mhtu-pedido.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-    jsPDF: { unit: 'pt', format: 'a5', orientation: 'landscape' }
+    jsPDF: { unit: 'pt', format: 'A4', orientation: 'potrait' }
   };
 
   html2pdf()
