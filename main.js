@@ -184,12 +184,12 @@ function generatePdf() {
           header {
             background-image: url(custom/checkred-bg-gg.jpg);
             color: #b34a12;
-            padding: 5px;
+            padding: 2px;
             text-align: center;
             position: sticky-top;
           }
           #order-report {
-            padding: 20px;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             font-family: "Quicksand", sans-serif;
@@ -199,7 +199,7 @@ function generatePdf() {
           display:flex;
           }
           .form-field {
-            margin: 25px;
+            margin: 10px;
           }
         </style>
 
