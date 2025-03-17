@@ -331,12 +331,13 @@ nav {
     border: 2px solid transparent;
     transition: transform 0.2s ease;
     border-radius: 15px;
-    background-color: rgba(255, 230, 230, 0.463)
+    margin: 3px;
+    background-color: #ffb4b43d;
 }
 
 .item:hover {
     transform: scale(1.1);
-    border: 2px solid #ffffff;
+    border: 2px solid #ffb4b43d;
 }
 
 .preview {
@@ -395,7 +396,8 @@ nav {
     width: 400px;
     height: 250px;
     overflow-y: scroll;
-
+    scrollbar-width: thin;
+    scrollbar-color: #c39c9c rgb(234, 217, 217);
 }
 
 .category img {
@@ -604,10 +606,17 @@ footer a {
 
 /*------- questions ---------*/
 
+.fa-caret-down{
+    padding-left: 10px;
+    color: #b56063;
+}
+
 .question-list {
     background-color: #f4e1e1;
     overflow-x: hidden;
     overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #c39c9c rgb(234, 217, 217);
     height: 400px;
     padding: 15px;
     font-family: 'quicksand', sans-serif;
@@ -615,8 +624,13 @@ footer a {
 
 .question-a {
     font-weight: bold;
-    padding: 5px 0px 5px 0px;
+    padding: 5px;
     text-align: justify;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.488);
+    /*border-right: 1px solid gray;
+    border-left:1px solid gray;
+    border-radius: 25px; */
+    margin: 5px;
 }
 
 .question-a :hover {
