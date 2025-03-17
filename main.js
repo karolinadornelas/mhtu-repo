@@ -1,301 +1,175 @@
-const vitrineImages = document.querySelectorAll('.vitrine img');
-const baseImages = document.querySelectorAll('.ch-base img');
-
-const previewBase = document.getElementById('preview-base');
-const previewSkin = document.getElementById('preview-skin');
-const previewBlush = document.getElementById('preview-blush');
-const previewFace = document.getElementById('preview-face');
-const previewHoodie = document.getElementById('preview-hoodie');
-const previewTrinket = document.getElementById('preview-trinket');
-const previewSuit = document.getElementById('preview-suit');
-const previewHeadset = document.getElementById('preview-headset');
-const previewDeco = document.getElementById('preview-deco');
-const previewAcc = document.getElementById('preview-acessory');
-const previewBag = document.getElementById('preview-bag');
-const previewCollar = document.getElementById('preview-collar');
-
-const vitrines = {
-  miffy: document.getElementById('vitrine-miffy'),
-  bunny: document.getElementById('vitrine-bunny'),
-  catinho: document.getElementById('vitrine-catinho'),
-};
-
-let currentBase = null;
-
-function updateLayer(category, src) {
-  const layerMap = {
-    base: previewBase,
-    blush: previewBlush,
-    skin: previewSkin,
-    face: previewFace,
-    hoodie: previewHoodie,
-    trinket: previewTrinket,
-    suit: previewSuit,
-    headset: previewHeadset,
-    deco: previewDeco,
-    acessory: previewAcc,
-    bag: previewBag,
-    collar: previewCollar
+document.addEventListener("DOMContentLoaded", () => {
+  const tabs = document.querySelectorAll(".tab-custom");
+  const categories = document.querySelectorAll(".category");
+  const previewImages = {
+      capuz: document.getElementById("preview-hoodie"),
+      vestido: document.getElementById("preview-dress"),
+      bolsas: document.getElementById("preview-bag"),
+      fantasias: document.getElementById("preview-costumes"),
+      laços: document.getElementById("preview-bow"),
+      headphones: document.getElementById("preview-fones"),
+      detalhes: document.getElementById("preview-extras")
   };
 
-  const layer = layerMap[category];
+  let lastClickedImg = null; // Variável para rastrear a última imagem clicada.
 
-  if (layer) {
-    if (layer.src === src) {
-      layer.src = '';
-      layer.style.display = 'none';
-    } else {
-      layer.src = src;
-      layer.style.display = 'block';
-    }
-  }
-}
+  // categorias
+  tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+          const tabName = tab.getAttribute("data-tab");
+          const targetCategory = document.getElementById(`${tabName}-category`);
 
-function resetPreview() {
-  [previewSkin, previewBlush, previewFace, previewHoodie, previewTrinket, previewSuit, previewHeadset, previewDeco, previewAcc, previewBag, previewCollar].forEach(
-    (layer) => {
-      layer.src = '';
-      layer.style.display = 'none';
-    }
-  );
-}
+          // remover e ativar 'active' de todas as abas e categorias
+          tabs.forEach(t => t.classList.remove("active"));
+          categories.forEach(c => c.classList.remove("active"));
 
-function handleBaseSelection(baseName, imgSrc) {
-  if (currentBase !== baseName) {
-    currentBase = baseName;
-    previewBase.src = imgSrc;
-    previewBase.style.display = 'block';
-    resetPreview();
-    Object.values(vitrines).forEach((vitrine) => {
-      vitrine.style.display = 'none';
-    });
-
-    vitrines[baseName].style.display = 'block';
-  }
-}
-
-baseImages.forEach((img) => {
-  img.addEventListener('click', () => {
-    const baseName = img.nextElementSibling.textContent.trim().toLowerCase();
-    const imgSrc = img.src;
-    handleBaseSelection(baseName, imgSrc);
+          tab.classList.add("active");
+          if (targetCategory) {
+              targetCategory.classList.add("active");
+          }
+      });
   });
-});
 
-vitrineImages.forEach((img) => {
-  img.addEventListener('click', () => {
-    const category = img.classList[0];
-    const imgSrc = img.src;
-    updateLayer(category, imgSrc);
-  });
-});
+  // Atualizar as camadas
+  categories.forEach(category => {
+      category.addEventListener("click", (event) => {
+          if (event.target.tagName === "IMG") {
+              const clickedImgSrc = event.target.getAttribute("src");
+              const categoryId = category.getAttribute("id").replace("-category", "");
 
-document.addEventListener("DOMContentLoaded", function() {
-  const baseOptions = document.querySelectorAll(".base-option");
-  const bxCustom = document.getElementById("bx-custom");
+              if (lastClickedImg === clickedImgSrc) {
+                  // Se o usuário clicar duas vezes na mesma imagem, removemos a preview
+                  if (previewImages[categoryId]) {
+                      previewImages[categoryId].setAttribute("src", "");
+                  }
+                  lastClickedImg = null; // Resetamos a última imagem clicada.
+              } else {
+                  // Caso contrário, mostramos a nova imagem na preview
+                  if (previewImages[categoryId]) {
+                      previewImages[categoryId].setAttribute("src", clickedImgSrc);
+                  }
+                  lastClickedImg = clickedImgSrc; // Atualizamos a última imagem clicada.
+              }
 
-  //as customizações ficam visíveis apenas ao clicar em uma base
-  baseOptions.forEach(option => {
-      option.addEventListener("click", () => {
-          bxCustom.style.display = "flex";
+              // Se o usuário escolher uma fantasia, esconderemos vestidos e capuzes da preview.
+              if (categoryId === "fantasias") {
+                  previewImages["capuz"].setAttribute("src", "");
+                  previewImages["vestido"].setAttribute("src", "");
+              }
+          }
       });
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".tab-button");
 
-/*cep config*/
+  buttons.forEach(button => {
+      button.addEventListener("click", function () {
+          const tabId = this.getAttribute("data-tab");
 
-document.getElementById('cep').addEventListener('blur', async () => {
-  const cep = document.getElementById('cep').value.replace(/\D/g, '');
+          // remover e ativar 'active' de todas as abas e categorias
+          buttons.forEach(btn => btn.classList.remove("active"));            
+          this.classList.add("active");
+          document.querySelectorAll(".tab-content").forEach(tab => {
+              tab.classList.remove("active");
+          });
+          document.getElementById(tabId).classList.add("active");
+      });
+  });
+});
 
-  if (cep.length === 8) {
-    try {
-      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-      const data = await response.json();
+// envios
 
-      if (data.erro) {
-        alert('CEP não encontrado.');
-        return;
-      }
+document.addEventListener("DOMContentLoaded", function () {
+  const cepInput = document.getElementById("cep");
+  const calcularFreteBtn = document.getElementById("calcularFrete");
 
-      document.getElementById('street').value = data.logradouro || '';
-      document.getElementById('neighborhood').value = data.bairro || '';
-      document.getElementById('city').value = data.localidade || '';
-      document.getElementById('state').value = data.uf || '';
-    } catch (error) {
-      alert('Erro ao buscar o endereço. Tente novamente.');
-    }
-  } else {
-    alert('Digite um CEP válido.');
+  if (cepInput) {
+      cepInput.addEventListener("input", function () {
+          const cep = this.value;
+          if (cep.length === 8) {
+              buscarEndereco(cep);
+          }
+      });
+  }
+
+  if (calcularFreteBtn) {
+      calcularFreteBtn.addEventListener("click", calcularFrete);
   }
 });
 
-/*solicitar encomenda*/
-document.getElementById('checkout-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-});
+async function buscarEndereco(cep) {
+  if (cep.length !== 8 || isNaN(Number(cep))) {
+      alert("CEP inválido!");
+      return;
+  }
 
+  const url = `https://viacep.com.br/ws/${cep}/json/`;
 
-document.getElementById('custom-ready').addEventListener('click', function () {
-  document.getElementById('canvas').style.display = 'none';
-  document.getElementById('custom-ready').style.display = 'none';
+  try {
+      const response = await fetch(url);
+      const data = await response.json();
 
-  document.getElementById('order-check').style.display = 'flex';
-
-  const finalOrderContainer = document.getElementById('final-order');
-  const previewImage = document.getElementById('preview-container').cloneNode(true);
-
-  finalOrderContainer.innerHTML = '';
-  finalOrderContainer.appendChild(previewImage);
-});
-
-/*pdf config*/
-
-document.getElementById('checkout-form').addEventListener('submit', (e) => {
-  e.preventDefault();
-  generatePdf();
-  alert('Entraremos em contato em breve, obrigada!');
-});
-
-function generatePdf() {
-  const orderCheckDiv = document.getElementById('final-order');
-  const orderFormDiv = document.getElementById('checkout-form');
-  const tempOrderCheck = orderCheckDiv.cloneNode(true);
-
-  const now = new Date();
-  const dateString = now.toLocaleDateString('pt-BR');
-  const timeString = now.toLocaleTimeString('pt-BR');
-  const dateTime = `Data do pedido: ${dateString} - Horário: ${timeString}`;
-
-  const dateElement = document.createElement('p');
-  dateElement.textContent = dateTime;
-  dateElement.style.textAlign = 'right';
-  dateElement.style.fontWeight = 'bold';
-  const formData = new FormData(orderFormDiv);
-  let formContent = '<h3>Dados de Envio</h3><ul>';
-
-  formData.forEach((value, key) => {
-    formContent += `<li><strong>${key}:</strong> ${value}</li>`;
-  });
-  formContent += '</ul>';
-
-  const content = `
-        <style>
-          header {
-            background-image: url(custom/checkred-bg-gg.jpg);
-            color: #b34a12;
-            padding: 2px;
-            text-align: center;
-            position: sticky-top;
-          }
-          #order-report {
-            padding: 5px;
-            display: flex;
-            flex-direction: column;
-            font-family: "Quicksand", sans-serif;
-
-          }
-          .st-order{
-            display:flex;
-            justify-content: space-evenly;
-          }
-          .form-field {
-            margin-top: 45px;
-          }
-          .form-field-date{
-            margin-top: 20px;
-            position: absolute;
-          }
-        </style>
-
-        <div>
-          <header>
-            <img src="/logo/mhtu-zip-logo.png" alt="mhtu logo" style="width: 185px;" />
-          </header>
-          
-          <div id="order-report">
-            <h3>Resumo do Pedido ୭˚.🎀</h3>
-            <div class="st-order">
-              <span>${tempOrderCheck.innerHTML}</span>
-              <div class="form-field">${formContent}</div>
-            </div>
-            
-            <div class="form-field-date">${dateElement.outerHTML}</div>
-
-          </div>
-
-        </div>
-    `;
-
-  const tempContainer = document.createElement('div');
-  tempContainer.innerHTML = content;
-  document.body.appendChild(tempContainer);
-
-  const options = {
-    margin: 0,
-    filename: 'mhtu-pedido.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true, scrollY: 0 },
-    jsPDF: { unit: 'pt', format: 'a5', orientation: 'portrait' },
-    pagebreak: { mode: ['avoid-all'] }
-  };
-
-  html2pdf()
-    .set(options)
-    .from(tempContainer)
-    .save()
-    .then(() => {
-      document.body.removeChild(tempContainer);
-    })
-    .catch((error) => {
-      console.error("Erro ao gerar PDF:", error);
-      alert("Erro ao gerar o PDF. Tente novamente.");
-    });
-
+      if (data.erro) {
+          alert("CEP não encontrado!");
+      } else {
+          document.getElementById("endereco").value = data.logradouro || "";
+          document.getElementById("bairro").value = data.bairro || "";
+          document.getElementById("cidade").value = data.localidade || "";
+          document.getElementById("uf").value = data.uf || "";
+      }
+  } catch (error) {
+      console.error("Erro ao buscar endereço:", error);
+  }
 }
 
-function showCategory(category) {
-  const categories = document.querySelectorAll('.category');
-  categories.forEach(cat => cat.classList.remove('active'));
+async function calcularFrete() {
+  const cepDestino = document.getElementById("cep").value;
+  const peso = document.getElementById("peso") ? document.getElementById("peso").value : "1"; 
+  const origemCep = "70000000"; // Brasília-DF
 
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  tabBtns.forEach(btn => btn.classList.remove('active'));
+  if (!cepDestino || cepDestino.length !== 8 || isNaN(Number(cepDestino))) {
+      alert("Digite um CEP válido!");
+      return;
+  }
 
+  const url = `https://api.linkcorreios.com/v1/calculo-frete?origem=${origemCep}&destino=${cepDestino}&peso=${peso}&formato=1&comprimento=20&altura=5&largura=15&servico=04014,04510`;
+
+  try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (data.erro) {
+          document.getElementById("resultado-frete").innerHTML = "Erro ao calcular o frete.";
+      } else {
+          let resultadoHTML = `<h3>Opções de Frete:</h3>`;
+          data.forEach(servico => {
+              resultadoHTML += `<p>${servico.nome}: R$ ${servico.valor} (Prazo: ${servico.prazo} dias)</p>`;
+          });
+          document.getElementById("resultado-frete").innerHTML = resultadoHTML;
+      }
+  } catch (error) {
+      console.error("Erro ao calcular o frete:", error);
+      document.getElementById("resultado-frete").innerHTML = "Erro ao calcular o frete.";
+  }
+}
+
+document.querySelectorAll('.question-a').forEach(item => {
+    item.addEventListener('click', function() {
+      const parent = item.parentElement;
   
-  document.getElementById(category).classList.add('active');
-  event.target.classList.add('active');
-}
-
-// //emailjs
-
-// (function(){
-//   emailjs.init("mhtuzip"); // Substitua YOUR_USER_ID pelo seu User ID
-
-//   document.getElementById("contact-form").addEventListener("submit", function(event) {
-//       event.preventDefault();
-
-//       // Envia o e-mail
-//       emailjs.send("mhtuzip", "template_rqro3wf", {
-//           name: document.getElementById("name").value,
-//           email: document.getElementById("email").value,
-//           notas: document.getElementById("comment").value,
-//           cep: document.getElementById("cep").value,
-//           telefone: document.getElementById("phone").value,
-//           rua: document.getElementById("street").value,
-//           bairro: document.getElementById("neighborhood").value,
-//           cidade: document.getElementById("city").value,
-//           estado: document.getElementById("state").value,
-//           numero: document.getElementById("number").value,
-//           complemento: document.getElementById("complement"),
-//           preview: document.getElementById("final-order")
-
-//       })
-//       .then(function(response) {
-//           console.log("SUCCESS!", response.status, response.text);
-//           alert("Mensagem enviada com sucesso!");
-//       }, function(error) {
-//           console.log("FAILED...", error);
-//           alert("Ocorreu um erro ao enviar a mensagem. Tente novamente.");
-//       });
-//   });
-// })();
+      // Se o item clicado já estiver ativo, podemos simplesmente fechar
+      if (parent.classList.contains('active')) {
+        parent.classList.remove('active');
+      } else {
+        // Fechar todas as perguntas abertas
+        document.querySelectorAll('.question.active').forEach(activeQuestion => {
+          activeQuestion.classList.remove('active');
+        });
+  
+        // Abrir a pergunta clicada
+        parent.classList.add('active');
+      }
+    });
+  });
