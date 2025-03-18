@@ -274,7 +274,7 @@ nav {
 /* ----------tab custom-----------*/
 
 #custom {
-    height: 410px;
+    height: 450px;
 }
 
 #tabs-container {
@@ -287,7 +287,7 @@ nav {
 
 #base-custom {
     display: flex;
-    height: 400px;
+    height: 440px;
     background-color: rgb(240, 228, 228);
     margin: 5px;
     border-radius: 15px;
@@ -346,6 +346,29 @@ nav {
     margin: auto;
 }
 
+.layers{
+    background-color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+}
+
+.ready{
+    padding-top: 15px;
+}
+
+.ready button{
+    background-color: #b56063;
+    width: 250px;
+    border-radius: 15px;
+    height: 30px;
+    color: white;
+    font-family: 'Jua';
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 0px;
+}
+
 .preview .layers img {
     position: absolute;
     width: 100%;
@@ -394,14 +417,14 @@ nav {
     justify-self: start;
     /* border: 1px solid black; */
     width: 400px;
-    height: 250px;
+    height: 300px;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: #c39c9c rgb(234, 217, 217);
 }
 
 .category img {
-    width: 90px;
+    width: 115px;
 }
 
 .tab-custom {
@@ -412,12 +435,6 @@ nav {
     text-align: center;
     align-items: center;
 }
-
-#preview-container {
-    background-color: white;
-    border-radius: 15px;
-}
-
 /* ------- frete -------- */
 
 #form-frete {
@@ -655,4 +672,71 @@ footer a {
 
 .question-a {
     cursor: pointer;
+}
+
+#custom-price{
+    background-color: #c39c9c;
+    font-family: 'quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+}
+
+.opt-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.payment-box {
+    font-family: 'Jua', sans-serif;
+}
+
+.opt-box {
+    display: flex;
+    gap: 10px;
+}
+
+.payment-option, span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+    user-select: none;
+    position: relative;
+}
+
+.payment-option:hover{
+    background-color: #9c4a4a;
+    border: 1px solid #9c4a4a;
+}
+
+.payment-option input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.payment-option span {
+    pointer-events: none;
+}
+
+.payment-option, span:hover{
+    border: 1px solid #9c4a4a
+}
+.payment-option input:checked + span {
+    background-color: #9c4a4a;
+    color: white;
 }
