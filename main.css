@@ -46,6 +46,10 @@ body {
     background-color: white;
 }
 
+.versao{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #canvas-leap {
     position: fixed;
     top: 50%;
@@ -279,7 +283,7 @@ nav {
 
 #tabs-container {
     margin-top: 10px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     width: 425px;
     scrollbar-width: thin;
     scrollbar-color: #c39c9c rgb(234, 217, 217);
@@ -546,17 +550,17 @@ nav {
 
 footer {
     font-family: "Jua";
-    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 footer a {
     text-decoration: none;
     color: rgb(150, 123, 123);
+    margin-top: 15px;
 }
 
 /* ------- music player ------ */
@@ -740,3 +744,284 @@ footer a {
     background-color: #9c4a4a;
     color: white;
 }
+
+
+@media (min-width: 400px) and (max-width: 430px) {
+    .site-adress {
+        margin-left: 2px;
+        font-family: "Jua";
+        background-color: white;
+        border-radius: 15px;
+        width: 60%;
+        font-size: 10px;
+    }
+    
+    .start-info {
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .welcome-card{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        width: 400px;
+        background-color: #f4e1e1;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #about {
+        overflow: auto;
+        height: 385px;
+    }
+    
+    .about-text h2 {
+        font-family: "Jua";
+    }
+    
+    .about-text {
+
+        font-family: "quicksand";
+        background-color: rgb(240, 228, 228);
+        margin: 5px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    
+    .about-text a {
+        font-family: "Jua";
+        color: #b56063;
+        text-decoration: none;
+        cursor: auto;
+    }
+    
+    .img-txt-info {
+        width: 85px;
+        margin-left: 75px;
+    }
+
+    #custom {
+        height: 550px;
+        overflow: auto;
+    }
+    
+    #tabs-container {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        width: 320px;
+        /* overflow-x: scroll; */
+        /* scrollbar-width: thin;
+        scrollbar-color: #c39c9c rgb(234, 217, 217); */
+    }
+    
+    #base-custom {
+        display: flex;
+        flex-wrap: wrap;
+        height: 750px;
+        width: 280px;
+        background-color: rgb(240, 228, 228);
+        margin: 5px;
+        border-radius: 15px;
+    }
+    
+    .tabs-custom-content {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    
+    .tab-custom {
+        padding: 10px;
+        width: 85px;
+        margin: 2px;
+        background-color: rgb(234, 217, 217);
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    
+    }
+    
+    .tab-custom.active {
+        background-color: #ffc3c3;
+        color: white;
+    }
+    
+    .category {
+        display: none;
+        justify-content: center;
+        justify-content: flex-start;
+    }
+    
+    .category.active {
+        display: flex;
+        flex-wrap: wrap;
+        width: 390px;
+    }
+    
+    .category img {
+        width: 75px;
+        height: 95px;
+    }
+
+    .preview {
+        position: relative;
+        width: 180px;
+        margin: auto;
+    }
+    
+    .preview .layers img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .category.active {
+        display: flex;
+        width: 300px;
+    }
+  }
+  
+ @media (min-width: 430px) and (max-width: 440px) {
+    .site-adress {
+        margin-left: 2px;
+        font-family: "Jua";
+        background-color: white;
+        border-radius: 15px;
+        width: 60%;
+        font-size: 10px;
+    }
+    
+    .start-info {
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .welcome-card{
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+        width: 400px;
+        background-color: #f4e1e1;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #about {
+        overflow: auto;
+        height: 385px;
+    }
+    
+    .about-text h2 {
+        font-family: "Jua";
+    }
+    
+    .about-text {
+
+        font-family: "quicksand";
+        background-color: rgb(240, 228, 228);
+        margin: 5px;
+        padding: 10px;
+        border-radius: 15px;
+    }
+    
+    .about-text a {
+        font-family: "Jua";
+        color: #b56063;
+        text-decoration: none;
+        cursor: auto;
+    }
+    
+    .img-txt-info {
+        width: 85px;
+        margin-left: 75px;
+    }
+
+    #custom {
+        height: 550px;
+        overflow: auto;
+    }
+    
+    #tabs-container {
+        flex-wrap: wrap;
+        margin-top: 10px;
+        width: 320px;
+        /* overflow-x: scroll; */
+        /* scrollbar-width: thin;
+        scrollbar-color: #c39c9c rgb(234, 217, 217); */
+    }
+    
+    #base-custom {
+        display: flex;
+        flex-wrap: wrap;
+        height: 750px;
+        width: 280px;
+        background-color: rgb(240, 228, 228);
+        margin: 5px;
+        border-radius: 15px;
+    }
+    
+    .tabs-custom-content {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    
+    .tab-custom {
+        padding: 10px;
+        width: 85px;
+        margin: 2px;
+        background-color: rgb(234, 217, 217);
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    
+    }
+    
+    .tab-custom.active {
+        background-color: #ffc3c3;
+        color: white;
+    }
+    
+    .category {
+        display: none;
+        justify-content: center;
+        justify-content: flex-start;
+    }
+    
+    .category.active {
+        display: flex;
+        flex-wrap: wrap;
+        width: 390px;
+    }
+    
+    .category img {
+        width: 75px;
+        height: 95px;
+    }
+
+    .preview {
+        position: relative;
+        width: 180px;
+        margin: auto;
+    }
+    
+    .preview .layers img {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .category.active {
+        display: flex;
+        width: 300px;
+    }
+  }

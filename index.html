@@ -20,6 +20,7 @@
 <body>
 
     <div id="canvas-overflow">
+        <p class="versao">versão beta</p>
         <div id="canvas-leap">
             <header>
                 <div id="window-deco">
@@ -53,14 +54,7 @@
                 <div class="navigation-tabs">
                     <button class="tab-button active" data-tab="start"><i class="fa-solid fa-house"></i>inicio</button>
                     <button class="tab-button" data-tab="about"><i class="fa-solid fa-seedling"></i>sobre</button>
-                    <button class="tab-button" data-tab="custom"><i
-                            class="fa-solid fa-pen-to-square"></i>custom!</button>
-                    <!-- <button class="tab-button" data-tab="gallery"><i class="fa-solid fa-images"></i>gallery</button> -->
-                    <!-- <button style="width: auto" class="tab-button" data-tab="shipping"><i
-                            class="fa-solid fa-truck-fast"></i>pagamento e envio</button>
-                    <button class="tab-button" data-tab="faq"><i 
-                            class="fa-solid fa-circle-question"></i>duvidas</button>-->
-
+                    <button class="tab-button" data-tab="custom"><i class="fa-solid fa-pen-to-square"></i>custom!</button>
                 </div>
 
                 <div id="start" class="tab-content active">
@@ -81,11 +75,10 @@
                         <div class="welcome-card">
                             <img src="/scr/img/site-assets/sprouts.gif" alt="">
                             <div class="users">
-                                <p>mh! |</p>
                                 <p>enviamos para todo o brasil</p>
                             </div>
                             <h2>bem-vindo!</h2>
-                            <p>somos uma lojinha de artezanato que oferece fofuras em croche e biscuit</p>
+                            <p>somos uma lojinha de artesanato que oferece fofuras em croche e biscuit</p>
                         </div>
                     </div>
 
@@ -119,6 +112,32 @@
 
                 <div id="custom" class="tab-content">
                     <div id="base-custom">
+
+                        <!-- preview -->
+                        <div class="preview" id="preview-container">
+                            <div class="layers">
+                                <img src="scr/miffy custom/base-miffy.png" alt="Base Preview" id="preview-base">
+                                <img src="scr/miffy custom/face-m-black.png" alt="Base Preview" id="preview-face">
+                                <img src="" alt="" id="preview-hoodie">
+                                <img src="" alt="" id="preview-dress">
+                                <img src="" alt="" id="preview-bag">
+                                <img src="" alt="" id="preview-fones">
+                                <img src="" alt="" id="preview-costumes">
+                                <img src="" alt="" id="preview-extras">
+                                <img src="" alt="" id="preview-bow">
+                            </div>
+
+                            <!-- <div id="custom-price">
+                                <p>Valor: R$</p>
+                                <p class="price">55</p>
+                            </div>
+
+                            <div class="ready">
+                                <button>pronto!</button>
+                            </div> -->
+                        </div>
+
+                        
                         <!-- tabs custom -->
                         <div class="custom-options">
                             <div class="tabs-custom-content" id="tabs-container">
@@ -130,7 +149,6 @@
                                 <button class="tab-custom" data-tab="headphones">fones</button>
                                 <button class="tab-custom" data-tab="detalhes">detalhes</button>
                             </div>
-
                             <!-- categorias -->
                             <div id="vestido-category" class="category active">
                                 <img class="item" alt="opções de vestido"
@@ -251,30 +269,7 @@
                         </div>
 
 
-                        <!-- preview -->
-                        <div class="preview" id="preview-container">
-                            <div class="layers">
-                                <img src="scr/miffy custom/base-miffy.png" alt="Base Preview" id="preview-base">
-                                <img src="scr/miffy custom/face-m-black.png" alt="Base Preview" id="preview-face">
-                                <img src="" alt="" id="preview-hoodie">
-                                <img src="" alt="" id="preview-dress">
-                                <img src="" alt="" id="preview-bag">
-                                <img src="" alt="" id="preview-fones">
-                                <img src="" alt="" id="preview-costumes">
-                                <img src="" alt="" id="preview-extras">
-                                <img src="" alt="" id="preview-bow">
-                            </div>
-
-                            <div id="custom-price">
-                                <p>Valor: R$</p>
-                                <p class="price">55</p>
-                            </div>
-
-                            <div class="ready">
-                                <button>pronto!</button>
-                            </div>
-
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -382,130 +377,13 @@
 
                 </div>
 
-                <div id="shipping" class="tab-content">
-                    <!-- <div class="shipping-text">
-                        <h2>pagamento e envio!</h2>
-                        <p> compras feitas por aqui são realizados pelos Correios, e o frete é calculado e pago pelo
-                            cliente. Caso prefira, você pode finalizar sua compra diretamente na nossa loja na shopee e
-                            nos enviar o
-                            arquivo da sua Miffy personalizada pelo WhatsApp.
-                            todo o processo de pagamento é feito pela plataforma Infinity, e o único e-mail utilizado
-                            para
-                            comunicação é o mhtuzip@gmail.com. <strong>nunca solicitaremos valores adicionais além do
-                                preço do produto e frete.</strong></p>
-                        <a
-                            href="https://api.whatsapp.com/send/?phone=5561995055629&text&type=phone_number&app_absent=0"><i
-                                class="fa-brands fa-whatsapp"></i>entre em contato!</a>
-                    </div> -->
-
-                    <!-- <div id="payment">
-                        <div class="clientId">
-                            <div class="form-container">
-                                <div class="payment-box">
-                                    <p>Selecione a forma de pagamento:</p>
-                                    <div class="opt-box">
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="pix">
-                                            <span>pix</span>
-                                        </label>
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="boleto">
-                                            <span>boleto</span>
-                                        </label>
-                                        <label class="payment-option">
-                                            <input type="radio" name="payment" value="credito">
-                                            <span>cartão</span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <p>preencha os dados de contato!</p>
-                                <form id="clientForm">
-                                    <div class="form-group">
-                                        <label for="name">nome</label>
-                                        <input type="text" id="name" name="name" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="email">e-mail</label>
-                                        <input type="email" id="email" name="email" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="tel">whatsapp</label>
-                                        <input type="tel" id="tel" name="tel" required>
-                                    </div>
-
-                                </form>
-
-                                <div class="arrow-box">
-                                    <button type="submit">próximo<i class="fa-solid fa-right-long"></i></button>
-
-                                </div>
-
-                                <div class="shipping-info" style="display: none;">
-                                    <form id="form-frete">
-                                        <p>preencha os dados de envio!</p>
-                                        <label for="cep">CEP:</label>
-                                        <input type="text" id="cep" name="cep" maxlength="8" required>
-
-                                        <label for="endereco">endereço:</label>
-                                        <input type="text" id="endereco" name="endereco" readonly>
-
-                                        <label for="bairro">bairro:</label>
-                                        <input type="text" id="bairro" name="bairro" readonly>
-
-                                        <label for="cidade">cidade:</label>
-                                        <input type="text" id="cidade" name="cidade" readonly>
-
-                                        <label for="uf">estado:</label>
-                                        <input type="text" id="uf" name="uf" readonly>
-
-                                        <label for="peso">peso (em kg):</label>
-                                        <input type="number" id="peso" name="peso" step="0.08" required>
-
-                                        <button type="button" id="calcularFrete">Calcular Frete</button>
-                                    </form>
-                                    <div id="resultado-frete"></div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div> -->
-            </div>
+                <div id="shipping" class="tab-content"></div>
 
 
         </div>
 
         <footer>
-            <!-- <div id="music-player">
-                <div class="wrap">
-                    <div class="music-info">
-                        <img id="cover" src="default-cover.jpg" alt="Capa do Álbum">
-                        <div class="music-description">
-                            <h2 id="songName"></h2>
-                            <p id="songArtist"></p>
-                        </div>
-                    </div>
-                    <div class="controls">
-                        <button id="prevBtn"><i class="fa-solid fa-backward"></i></button>
-                        <button id="playBtn"><i class="fa-solid fa-play"></i></button>
-                        <button id="nextBtn"><i class="fa-solid fa-forward"></i></button>
-                    </div>
-                    <div class="progress">
-                        <input type="range" id="progressBar" value="0">
-                    </div>
-                </div>
-                
-            </div>
             
-            <audio id="audioPlayer">
-                <source src="song.mp3" type="audio/mpeg">
-                Seu navegador não suporta áudio HTML5.
-            </audio> -->
             <a href="https://github.com/karolinadornelas"><i class="fa-brands fa-github"></i>karolinadornelas</a>
         </footer>
     </div>
