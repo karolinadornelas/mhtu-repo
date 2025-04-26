@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const categories = document.querySelectorAll(".category");
   const previewImages = {
       capuz: document.getElementById("preview-hoodie"),
+      cachecol: document.getElementById("preview-cachecol"),
       vestido: document.getElementById("preview-dress"),
       bolsas: document.getElementById("preview-bag"),
       fantasias: document.getElementById("preview-costumes"),
@@ -11,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       detalhes: document.getElementById("preview-extras")
   };
 
-  let lastClickedImg = null; // Variável para rastrear a última imagem clicada.
+  let lastClickedImg = null; // variável para rastrear a última imagem clicada.
 
   // categorias
   tabs.forEach(tab => {
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 
-  // Atualizar as camadas
+  // atualizar as camadas
   categories.forEach(category => {
       category.addEventListener("click", (event) => {
           if (event.target.tagName === "IMG") {
@@ -38,20 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
               const categoryId = category.getAttribute("id").replace("-category", "");
 
               if (lastClickedImg === clickedImgSrc) {
-                  // Se o usuário clicar duas vezes na mesma imagem, removemos a preview
+                  // ae o usuário clicar duas vezes na mesma imagem, removemos a preview
                   if (previewImages[categoryId]) {
                       previewImages[categoryId].setAttribute("src", "");
                   }
-                  lastClickedImg = null; // Resetamos a última imagem clicada.
+                  lastClickedImg = null; 
               } else {
-                  // Caso contrário, mostramos a nova imagem na preview
                   if (previewImages[categoryId]) {
                       previewImages[categoryId].setAttribute("src", clickedImgSrc);
                   }
-                  lastClickedImg = clickedImgSrc; // Atualizamos a última imagem clicada.
+                  lastClickedImg = clickedImgSrc; 
               }
 
-              // Se o usuário escolher uma fantasia, esconderemos vestidos e capuzes da preview.
+
               if (categoryId === "fantasias") {
                   previewImages["capuz"].setAttribute("src", "");
                   previewImages["vestido"].setAttribute("src", "");
@@ -159,16 +159,13 @@ document.querySelectorAll('.question-a').forEach(item => {
     item.addEventListener('click', function() {
       const parent = item.parentElement;
   
-      // Se o item clicado já estiver ativo, podemos simplesmente fechar
       if (parent.classList.contains('active')) {
         parent.classList.remove('active');
       } else {
-        // Fechar todas as perguntas abertas
         document.querySelectorAll('.question.active').forEach(activeQuestion => {
           activeQuestion.classList.remove('active');
         });
   
-        // Abrir a pergunta clicada
         parent.classList.add('active');
       }
     });
